@@ -11,4 +11,5 @@ curien-db
 tags
 TAGS
 *.egg-info
+*.pyc
 ve
