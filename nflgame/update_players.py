@@ -175,8 +175,12 @@ def meta_from_soup_row(team, soup_row):
     name = tds[1].a.get_text().strip()
     if ',' not in name:
         last_name, first_name = name, ''
-    else:
+    elif len(name.split(',') = 2):
         last_name, first_name = map(lambda s: s.strip(), name.split(','))
+    elif len(name.split(',') = 3):
+        last_name, first_name, suffix = map(lambda s: s.strip(), name.split(','))
+    else:
+        last_name, first_name = map(lambda s: s.strip(), name.split(',', 1))
 
     return {
         'team': team,
